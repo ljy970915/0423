@@ -1,5 +1,6 @@
 package com.ljy.test;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -23,8 +24,12 @@ public class PersonTest {
 			
 			Calendar c = Calendar.getInstance();
 			c.set(2010, 0,1);
-			String date = DateUtil.random(c.getTime(), new Date());
-			p.setCreated(date);
+			Date date = DateUtil.random(c.getTime(), new Date());
+			SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+			String format = sdf.format(date);
+			
+
+		p.setCreated(format);
 			System.out.println(i+"         "+p);
 		}
 	}
