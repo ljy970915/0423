@@ -16,19 +16,14 @@ public class RandomUtil {
 	public static int[] subRandom (int min, int max, int subs){
 		int[] sub = new int[subs];
 		HashSet<Integer> set = new HashSet<Integer>();
-		Random r = new Random();
-		
-		for (int j = 0; j < subs; j++) {
-			int i = r.nextInt(max-min+1)+min;
-			set.add(i);
-			j++;
+		while (set.size()!=subs) {
+			set.add(random(min,max));
 		}
-		int i=0;
+		int i =0;
 		for (Integer integer : set) {
 			sub[i]=integer;
 			i++;
 		}
-		
 		return sub;
 	//TODO 实现代码
 	}
@@ -37,7 +32,7 @@ public class RandomUtil {
 		
 		String str = "123456789qwertyuioplkjhgfdsazxcvbnmMNBVCXZASDFGHJKLPOIUYTREWQ";
 		
-		return str.charAt(random(0, str.length()));
+		return str.charAt(random(0, str.length()-1));
 	//TODO 实现代码
 	}
 	//方法4：返回参数length个字符串(5分)，方法内部要调用randomCharacter()方法 (4分)

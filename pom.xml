@@ -3,7 +3,8 @@
   <groupId>com.ljy</groupId>
   <artifactId>Week2</artifactId>
   <version>1.0-SNAPSHOT</version>
- 
+   
+   
   <dependencies>
   	<dependency>
   		<groupId>junit</groupId>
